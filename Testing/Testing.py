@@ -34,3 +34,5 @@ elif wert == 5:
     print('Wert ist exakt 5')
 else:
     print('Wert ist größer als 5')
+
+print ("Good bye!")
