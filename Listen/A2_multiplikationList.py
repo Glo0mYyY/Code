@@ -1,0 +1,6 @@
+numberList = [1, 5, 3, 9]
+summe = 1
+for number in numberList:
+    summe *= number
+
+print(summe)
