@@ -3,26 +3,29 @@ class Mitarbeiter:
         self.name = name
         self.position = position
         self.alter = alter
-    
+
     def __str__(self):
         return f"{self.name}"
+
 
 class Abteilung:
     def __init__(self, abteilungsname):
         self.abteilungsname = abteilungsname
         self.mitarbeiter_liste = []
-    
+
     def mitarbeiter_hinzufuegen(self, mitarbeiter):
         self.mitarbeiter_liste.append(mitarbeiter)
-    
+
     def mitarbeiter_auflisten(self):
         for mitarbeiter in self.mitarbeiter_liste:
             print(mitarbeiter, mitarbeiter.alter)
+
     def durchschnittsalter(self):
         alter_summe = 0
         for mitarbeiter in self.mitarbeiter_liste:
             alter_summe += mitarbeiter.alter
         return alter_summe / len(self.mitarbeiter_liste)
+
 
 # Testaufrufe
 # Erstellung von Mitarbeitern
@@ -38,4 +41,4 @@ abteilungMarketing.mitarbeiter_hinzufuegen(mitarbeiter3)
 
 # Auflistung der Mitarbeiter in der Abteilung
 abteilungIT.mitarbeiter_auflisten()
-print (abteilungIT.durchschnittsalter())
+print(abteilungIT.durchschnittsalter())
